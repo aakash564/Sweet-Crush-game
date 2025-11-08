@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sweet Crush</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "nanoid": "https://esm.sh/nanoid@5.0.7"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Sweet Crush</div>
+    <div class="hud">
+      <div>Score: <span id="score">0</span></div>
+      <div>Moves: <span id="moves">30</span></div>
+      <div>Level: <span id="level">1</span></div>
+    </div>
+    <div class="actions">
+      <button id="newGameBtn">New Game</button>
+      <button id="submitScoreBtn">Submit Score</button>
+    </div>
+  </header>
+
+  <main class="board-wrap">
+    <canvas id="gameCanvas" width="640" height="640"></canvas>
+    <div id="hint" class="hint">Drag candies to swap</div>
+  </main>
+
+  <section class="scores">
+    <h2>High Scores</h2>
+    <ul id="scoresList"></ul>
+  </section>
+
+  <footer class="footer">
+    <small>Use mouse or touch to swap. Only valid swaps that make a match will stay.</small>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
+
